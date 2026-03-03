@@ -1,0 +1,14 @@
+{
+  "name": "hack-hour-ts",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "check": "tsc",
+    "check:file": "tsc --noEmit --target ESNext --strict --skipLibCheck --forceConsistentCasingInFileNames"
+  },
+  "dependencies": {
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
