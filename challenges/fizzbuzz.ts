@@ -12,8 +12,22 @@ fizzbuzz(16);
 
 */
 
+import { b } from 'vitest/dist/chunks/suite.d.FvehnV49.js';
+
 const fizzbuzz = (num: number): (number | string)[] => {
-  return [];
+  const arr: (number | string)[] = [];
+  for (let i = 1; i <= num; i++) {
+    if (i % 3 === 0 && i % 5 !== 0) {
+      arr.push('fizz');
+    } else if (i % 5 === 0 && i % 3 !== 0) {
+      arr.push('buzz');
+    } else if (i % 3 === 0 && i % 5 === 0) {
+      arr.push('fizzbuzz');
+    } else {
+      arr.push(i);
+    }
+  }
+  return arr;
 };
 
 /*
@@ -37,7 +51,39 @@ fizzbuzzbazz(25);
 */
 
 const fizzbuzzbazz = (num: number): (number | string)[] => {
-  return [];
+  const arr: (number | string)[] = [];
+
+  const byThree = (num: number): boolean => {
+    return num % 3 === 0 ? true : false;
+  };
+  const byFive = (num: number): boolean => {
+    return num % 5 === 0 ? true : false;
+  };
+  const bySeven = (num: number): boolean => {
+    return num % 7 === 0 ? true : false;
+  };
+
+  for (let i = 1; i <= num; i++) {
+    if (byThree(i) && !byFive(i) && !bySeven(i)) {
+      arr.push('fizz');
+    } else if (byFive(i) && !byThree(i) && !bySeven(i)) {
+      arr.push('buzz');
+    } else if (bySeven(i) && !byThree(i) && !byFive(i)) {
+      arr.push('bazz');
+    } else if (byThree(i) && byFive(i) && !bySeven(i)) {
+      arr.push('fizzbuzz');
+    } else if (byThree(i) && bySeven(i) && !byFive(i)) {
+      arr.push('fizzbazz');
+    } else if (byFive(i) && bySeven(i) && !byThree(i)) {
+      arr.push('buzzbazz');
+    } else if (byThree(i) && byFive(i) && bySeven(i)) {
+      arr.push('fizzbuzzbazz');
+    } else {
+      arr.push(i);
+    }
+  }
+
+  return arr;
 };
 
 export { fizzbuzz, fizzbuzzbazz };
