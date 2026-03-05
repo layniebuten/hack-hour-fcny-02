@@ -10,7 +10,7 @@
  */
 
 function pow(base: number, power: number): number {
-  return 0; // Placeholder return value for type safety - replace for your solution
+  return base ** power;
 }
 
 /**
@@ -18,7 +18,18 @@ function pow(base: number, power: number): number {
  */
 
 function powRecurse(base: number, power: number): number {
-  return 0; // Placeholder return value for type safety - replace for your solution
+  if (power === 0) return 1;
+  if (power === 1) return base;
+
+  let result: number = base;
+
+  function powpow(result: number, base: number, power: number): number {
+    if (power === 1) return result;
+    result = result * base;
+    return powpow(result, base, power - 1);
+  }
+
+  return powpow(result, base, power);
 }
 
 export { pow, powRecurse };

@@ -17,7 +17,7 @@ describe('pow', () => {
   });
 });
 
-describe.skip('powRecurse', () => {
+describe('powRecurse', () => {
   it('returns 1 when the power is 0', () => {
     expect(powRecurse(5, 0)).toEqual(1);
   });

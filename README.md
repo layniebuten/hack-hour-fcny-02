@@ -8,13 +8,13 @@ Make sure you read through and understand the challenge, then work through your 
 
 ## Getting Started
 
-- [ ] Fork and clone this repository. If you need a refresher, just follow the instructions found in the [dev environment setup guide](https://github.com/CodesmithLLC/dev-environment-setup/blob/main/fork-clone.md)!
+- [X] Fork and clone this repository. If you need a refresher, just follow the instructions found in the [dev environment setup guide](https://github.com/CodesmithLLC/dev-environment-setup/blob/main/fork-clone.md)!
 
 Next, follow these steps in order to link the cloned repository in your local dev environment with the original repository on CodesmithLLC's GitHub.
 
-- [ ] On GitHub, navigate back to the codesmith-prep version of this repo, click the green `Code` button, and copy the URL in the dropdown.
-- [ ] In your terminal, type `git remote add upstream <codesmith-prep github URL>`.
-- [ ] Verify that you have aliases for origin and upstream set by typing `git remote -v`. These aliases should look something like this:
+- [X] On GitHub, navigate back to the codesmith-prep version of this repo, click the green `Code` button, and copy the URL in the dropdown.
+- [X] In your terminal, type `git remote add upstream <codesmith-prep github URL>`.
+- [X] Verify that you have aliases for origin and upstream set by typing `git remote -v`. These aliases should look something like this:
 
   ```bash
   origin    git@github.com:USERNAME/hack-hour-campus-01.git (fetch)
@@ -23,15 +23,15 @@ Next, follow these steps in order to link the cloned repository in your local de
   upstream  git@github.com:codesmith-prep/hack-hour-campus-01.git (push)
   ```
 
-- [ ] Set your configuration for this repo by running `git config pull.rebase false`.
+- [X] Set your configuration for this repo by running `git config pull.rebase false`.
 
 ## How do I get new Hack Hours every week?
 
 New challenges are released periodically throughout the cohort. When new challenges are released, follow these steps to update your local repository.
 
-- [ ] In your terminal, navigate to your hack hour directory.
-- [ ] Make sure you have added and committed your changes from previous hack hours. (If you're unsure, type `git status` to check!)
-- [ ] Then run:
+- [X] In your terminal, navigate to your hack hour directory.
+- [X] Make sure you have added and committed your changes from previous hack hours. (If you're unsure, type `git status` to check!)
+- [X] Then run:
 
 ```bash
 git pull upstream main
